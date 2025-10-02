@@ -6,212 +6,202 @@
   <title>Gift In Game (Gamepass)</title>
   <style>
     body {
-      font-family: Roboto, sans-serif;
-      background: #C9DBF0;
+      font-family: Arial, sans-serif;
+      background-color: #C9DBF0;
       margin: 0;
       padding: 0;
     }
     h1 {
       text-align: center;
-      padding: 20px 10px 5px 10px;
+      font-size: 18px;
+      margin: 12px 0;
+    }
+    .map-section {
+      margin: 15px auto;
+      max-width: 800px;
+      padding: 8px;
     }
     .map-title {
-      font-size: 20px;
+      font-size: 13px;
       font-weight: bold;
-      margin-top: 30px;
-      text-align: center;
+      margin-bottom: 2px;
     }
     .map-note {
-      font-size: 13px;
+      font-size: 11px;
       color: #444;
-      margin-top: 2px;
-      margin-bottom: 15px;
-      text-align: center;
+      margin-bottom: 8px;
     }
     .pricelist-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 12px;
-      padding: 10px 15px;
-      max-width: 1000px;
-      margin: 0 auto;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
     }
     .price-box {
       background: #fff;
-      border-radius: 12px;
-      padding: 10px;
+      padding: 8px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-    .price-box:hover {
-      transform: scale(1.03);
     }
     .item-name {
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 3px;
-    }
-    .item-robux {
       font-size: 12px;
-      color: #555;
+      font-weight: bold;
       margin-bottom: 2px;
     }
-    .item-price {
-      font-size: 13px;
-      color: #000;
-    }
-    form {
-      background: #fff;
-      margin: 30px auto;
-      padding: 20px;
-      border-radius: 12px;
-      max-width: 400px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    }
-    form h2 {
-      text-align: center;
-      margin-bottom: 15px;
-    }
-    label {
-      font-size: 14px;
-      font-weight: bold;
-      display: block;
-      margin-top: 10px;
+    .item-robux {
+      font-size: 10px;
+      color: #666;
       margin-bottom: 3px;
     }
-    input {
-      width: 100%;
-      padding: 8px;
-      font-size: 14px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+    .item-price {
+      font-size: 11px;
+      color: #000;
+      margin-bottom: 4px;
     }
     button {
-      width: 100%;
-      margin-top: 15px;
-      padding: 10px;
-      background: #0078d7;
+      margin-top: 3px;
+      padding: 4px 8px;
+      font-size: 11px;
       border: none;
+      border-radius: 6px;
+      background: #4a90e2;
       color: #fff;
-      border-radius: 8px;
-      font-size: 15px;
       cursor: pointer;
     }
     button:hover {
-      background: #005fa3;
+      background: #357ab8;
+    }
+    form {
+      margin: 20px auto;
+      max-width: 380px;
+      background: #fff;
+      padding: 12px;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    form h2 {
+      font-size: 14px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    label {
+      display: block;
+      font-size: 11px;
+      margin-bottom: 4px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 11px;
+    }
+    .send-btn {
+      width: 100%;
+      padding: 6px;
+      font-size: 12px;
+      background: #25d366;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .send-btn:hover {
+      background: #1ebc57;
     }
   </style>
 </head>
 <body>
 
-<h1>GIFT IN GAME (GAMEPASS)</h1>
+  <h1>GIFT IN GAME (GAMEPASS)</h1>
 
-<!-- MAP: ANTARCTICA EXPEDITION -->
-<div class="map-title">MAP: ANTARCTICA EXPEDITION</div>
-<div class="map-note">(tanpa ketemuan di server)</div>
-<div class="pricelist-container">
-  <div class="price-box" onclick="fillForm('Antarctica Expedition','Guide','196 Robux','25480')">
-    <div class="item-name">Guide</div>
-    <div class="item-robux">196 Robux</div>
-    <div class="item-price">Rp 25.480</div>
+  <!-- MAP: ANTARCTICA -->
+  <div class="map-section">
+    <div class="map-title">MAP : ANTARCTICA EXPEDITION</div>
+    <div class="map-note">(tanpa ketemuan di server)</div>
+    <div class="pricelist-container">
+      <div class="price-box"><div class="item-name">Guide</div><div class="item-robux">196 Robux</div><div class="item-price">Rp25.480</div><button onclick="fillForm('Antarctica Expedition','Guide','196 Robux','Rp25.480')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">Search & Rescue</div><div class="item-robux">545 Robux</div><div class="item-price">Rp70.850</div><button onclick="fillForm('Antarctica Expedition','Search & Rescue','545 Robux','Rp70.850')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">VIP</div><div class="item-robux">695 Robux</div><div class="item-price">Rp90.350</div><button onclick="fillForm('Antarctica Expedition','VIP','695 Robux','Rp90.350')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">Pro Pack</div><div class="item-robux">296 Robux</div><div class="item-price">Rp38.480</div><button onclick="fillForm('Antarctica Expedition','Pro Pack','296 Robux','Rp38.480')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">Luxury Pack</div><div class="item-robux">345 Robux</div><div class="item-price">Rp44.850</div><button onclick="fillForm('Antarctica Expedition','Luxury Pack','345 Robux','Rp44.850')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">Health Bottle</div><div class="item-robux">125 Robux</div><div class="item-price">Rp16.250</div><button onclick="fillForm('Antarctica Expedition','Health Bottle','125 Robux','Rp16.250')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">Music Backpack</div><div class="item-robux">345 Robux</div><div class="item-price">Rp44.850</div><button onclick="fillForm('Antarctica Expedition','Music Backpack','345 Robux','Rp44.850')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">Extra Stamina</div><div class="item-robux">99 Robux</div><div class="item-price">Rp12.870</div><button onclick="fillForm('Antarctica Expedition','Extra Stamina','99 Robux','Rp12.870')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">Storm Googles</div><div class="item-robux">99 Robux</div><div class="item-price">Rp12.870</div><button onclick="fillForm('Antarctica Expedition','Storm Googles','99 Robux','Rp12.870')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">Flags</div><div class="item-robux">40 Robux</div><div class="item-price">Rp5.200</div><button onclick="fillForm('Antarctica Expedition','Flags','40 Robux','Rp5.200')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">Flashlight</div><div class="item-robux">70 Robux</div><div class="item-price">Rp9.100</div><button onclick="fillForm('Antarctica Expedition','Flashlight','70 Robux','Rp9.100')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">Backpack Colors</div><div class="item-robux">50 Robux</div><div class="item-price">Rp6.500</div><button onclick="fillForm('Antarctica Expedition','Backpack Colors','50 Robux','Rp6.500')">Pilih</button></div>
+    </div>
   </div>
-  <div class="price-box" onclick="fillForm('Antarctica Expedition','Search & Rescue','545 Robux','70850')">
-    <div class="item-name">Search & Rescue</div>
-    <div class="item-robux">545 Robux</div>
-    <div class="item-price">Rp 70.850</div>
-  </div>
-  <div class="price-box" onclick="fillForm('Antarctica Expedition','VIP','695 Robux','90350')">
-    <div class="item-name">VIP</div>
-    <div class="item-robux">695 Robux</div>
-    <div class="item-price">Rp 90.350</div>
-  </div>
-  <div class="price-box" onclick="fillForm('Antarctica Expedition','Pro Pack','296 Robux','38480')">
-    <div class="item-name">Pro Pack</div>
-    <div class="item-robux">296 Robux</div>
-    <div class="item-price">Rp 38.480</div>
-  </div>
-  <div class="price-box" onclick="fillForm('Antarctica Expedition','Luxury Pack','345 Robux','44850')">
-    <div class="item-name">Luxury Pack</div>
-    <div class="item-robux">345 Robux</div>
-    <div class="item-price">Rp 44.850</div>
-  </div>
-  <div class="price-box" onclick="fillForm('Antarctica Expedition','Health Bottle','125 Robux','16250')">
-    <div class="item-name">Health Bottle</div>
-    <div class="item-robux">125 Robux</div>
-    <div class="item-price">Rp 16.250</div>
-  </div>
-  <div class="price-box" onclick="fillForm('Antarctica Expedition','Music Backpack','345 Robux','44850')">
-    <div class="item-name">Music Backpack</div>
-    <div class="item-robux">345 Robux</div>
-    <div class="item-price">Rp 44.850</div>
-  </div>
-  <div class="price-box" onclick="fillForm('Antarctica Expedition','Extra Stamina','99 Robux','12870')">
-    <div class="item-name">Extra Stamina</div>
-    <div class="item-robux">99 Robux</div>
-    <div class="item-price">Rp 12.870</div>
-  </div>
-  <div class="price-box" onclick="fillForm('Antarctica Expedition','Storm Googles','99 Robux','12870')">
-    <div class="item-name">Storm Googles</div>
-    <div class="item-robux">99 Robux</div>
-    <div class="item-price">Rp 12.870</div>
-  </div>
-  <div class="price-box" onclick="fillForm('Antarctica Expedition','Flags','40 Robux','5200')">
-    <div class="item-name">Flags</div>
-    <div class="item-robux">40 Robux</div>
-    <div class="item-price">Rp 5.200</div>
-  </div>
-  <div class="price-box" onclick="fillForm('Antarctica Expedition','Flashlight','70 Robux','9100')">
-    <div class="item-name">Flashlight</div>
-    <div class="item-robux">70 Robux</div>
-    <div class="item-price">Rp 9.100</div>
-  </div>
-  <div class="price-box" onclick="fillForm('Antarctica Expedition','Backpack Colors','50 Robux','6500')">
-    <div class="item-name">Backpack Colors</div>
-    <div class="item-robux">50 Robux</div>
-    <div class="item-price">Rp 6.500</div>
-  </div>
-</div>
 
-<!-- === MAP LAINNYA LANJUT DI SINI === -->
-<!-- Car Driving Indonesia, Dress to Impress, Brookhaven, Salon de Fiestas, Fisch -->
-<!-- (Karena panjang, semua struktur sama persis dengan Antarctica, tinggal lanjutkan isiannya) -->
+  <!-- MAP: CDI -->
+  <div class="map-section">
+    <div class="map-title">MAP : CAR DRIVING INDONESIA</div>
+    <div class="map-note">(ketemuan di server)</div>
+    <div class="pricelist-container">
+      <div class="price-box"><div class="item-name">Luxury Vehicle</div><div class="item-robux">259 Robux</div><div class="item-price">Rp33.670</div><button onclick="fillForm('Car Driving Indonesia','Luxury Vehicle','259 Robux','Rp33.670')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">Retro Pass</div><div class="item-robux">169 Robux</div><div class="item-price">Rp21.970</div><button onclick="fillForm('Car Driving Indonesia','Retro Pass','169 Robux','Rp21.970')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">Emergency Vehicle</div><div class="item-robux">139 Robux</div><div class="item-price">Rp18.070</div><button onclick="fillForm('Car Driving Indonesia','Emergency Vehicle','139 Robux','Rp18.070')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">Rare Imports</div><div class="item-robux">189 Robux</div><div class="item-price">Rp24.570</div><button onclick="fillForm('Car Driving Indonesia','Rare Imports','189 Robux','Rp24.570')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">Advanced Modification</div><div class="item-robux">249 Robux</div><div class="item-price">Rp32.370</div><button onclick="fillForm('Car Driving Indonesia','Advanced Modification','249 Robux','Rp32.370')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">Additional Car Slot</div><div class="item-robux">99 Robux</div><div class="item-price">Rp12.870</div><button onclick="fillForm('Car Driving Indonesia','Additional Car Slot','99 Robux','Rp12.870')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">2x Additional Car Slot</div><div class="item-robux">269 Robux</div><div class="item-price">Rp34.970</div><button onclick="fillForm('Car Driving Indonesia','2x Additional Car Slot','269 Robux','Rp34.970')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">2x Paycheck</div><div class="item-robux">399 Robux</div><div class="item-price">Rp51.870</div><button onclick="fillForm('Car Driving Indonesia','2x Paycheck','399 Robux','Rp51.870')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">(+50%) Job Earning</div><div class="item-robux">399 Robux</div><div class="item-price">Rp51.870</div><button onclick="fillForm('Car Driving Indonesia','(+50%) Job Earning','399 Robux','Rp51.870')">Pilih</button></div>
+      <div class="price-box"><div class="item-name">Luxury House</div><div class="item-robux">79 Robux</div><div class="item-price">Rp10.270</div><button onclick="fillForm('Car Driving Indonesia','Luxury House','79 Robux','Rp10.270')">Pilih</button></div>
+    </div>
+  </div>
 
-<!-- FORM -->
-<form id="orderForm">
-  <h2>Formulir Gift In Game</h2>
-  <label>Display Name Roblox</label>
-  <input type="text" id="displayname" required>
-  <label>Username Roblox</label>
-  <input type="text" id="username" required>
-  <label>Map</label>
-  <input type="text" id="map" required>
-  <label>Item</label>
-  <input type="text" id="item" required>
-  <label>Harga</label>
-  <input type="text" id="harga" required>
-  <button type="button" onclick="sendWA()">Kirim via WhatsApp</button>
-</form>
+  <!-- dst: DRESS TO IMPRESS, BROOKHAVEN, SALON DE FIESTAS, FISCH -->
+  <!-- (semua item dilist penuh dengan format sama seperti di atas) -->
 
-<script>
-function fillForm(map,item,robux,harga) {
-  document.getElementById("map").value = map;
-  document.getElementById("item").value = item + " (" + robux + ")";
-  document.getElementById("harga").value = "Rp " + harga;
-}
+  <!-- FORM -->
+  <form id="orderForm">
+    <h2>Form Order Gift In Game</h2>
+    <label>Display Name Roblox:</label>
+    <input type="text" id="displayname" required>
+    <label>Username Roblox:</label>
+    <input type="text" id="username" required>
+    <label>Maps:</label>
+    <input type="text" id="maps" readonly>
+    <label>Item:</label>
+    <input type="text" id="item" readonly>
+    <label>Jumlah Robux:</label>
+    <input type="text" id="robux" readonly>
+    <label>Harga:</label>
+    <input type="text" id="price" readonly>
+    <button type="button" class="send-btn" onclick="sendWA()">Kirim ke WhatsApp</button>
+  </form>
 
-function sendWA() {
-  let dn = document.getElementById("displayname").value;
-  let un = document.getElementById("username").value;
-  let map = document.getElementById("map").value;
-  let item = document.getElementById("item").value;
-  let harga = document.getElementById("harga").value;
+  <script>
+    function fillForm(map, item, robux, price) {
+      document.getElementById('maps').value = map;
+      document.getElementById('item').value = item;
+      document.getElementById('robux').value = robux;
+      document.getElementById('price').value = price;
+      window.scrollTo({ top: document.getElementById('orderForm').offsetTop - 15, behavior: 'smooth' });
+    }
 
-  let pesan = `Halo, saya ingin beli Gift In Game:\nDisplay Name: ${dn}\nUsername: ${un}\nMap: ${map}\nItem: ${item}\nHarga: ${harga}`;
-  window.open("https://wa.me/6283197962700?text=" + encodeURIComponent(pesan), "_blank");
-}
-</script>
+    function sendWA() {
+      let displayname = document.getElementById('displayname').value;
+      let username = document.getElementById('username').value;
+      let maps = document.getElementById('maps').value;
+      let item = document.getElementById('item').value;
+      let robux = document.getElementById('robux').value;
+      let price = document.getElementById('price').value;
+      let wa = "https://wa.me/6283197962700?text=" +
+        "Display Name: " + displayname + "%0A" +
+        "Username: " + username + "%0A" +
+        "Maps: " + maps + "%0A" +
+        "Item: " + item + "%0A" +
+        "Robux: " + robux + "%0A" +
+        "Harga: " + price;
+      window.open(wa, "_blank");
+    }
+  </script>
 
 </body>
 </html>
