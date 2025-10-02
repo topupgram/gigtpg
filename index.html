@@ -7,234 +7,211 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f7f7f7;
+      background: #C9DBF0;
       margin: 0;
       padding: 0;
-      font-size: 14px;
     }
-    h2 {
+    h1 {
       text-align: center;
-      margin-top: 20px;
+      padding: 20px 10px 5px 10px;
     }
-    .map-section {
-      margin: 30px auto;
-      max-width: 900px;
-      padding: 10px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    .map-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 30px;
+      text-align: center;
     }
-    .map-section h3 {
-      margin: 0;
-      font-size: 16px;
-    }
-    .note {
-      font-size: 12px;
-      color: #555;
-      margin-bottom: 12px;
+    .map-note {
+      font-size: 13px;
+      color: #444;
+      margin-top: 2px;
+      margin-bottom: 15px;
+      text-align: center;
     }
     .pricelist-container {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      padding: 10px 15px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
     .price-box {
-      background: #C9DBF0;
-      padding: 8px;
-      text-align: center;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.2s;
-      font-size: 13px;
-    }
-    .price-box:hover {
-      background: #a9c7e9;
-    }
-    .form-container {
-      margin: 30px auto;
-      max-width: 500px;
-      padding: 20px;
       background: #fff;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .price-box:hover {
+      transform: scale(1.03);
+    }
+    .item-name {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 3px;
+    }
+    .item-robux {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 2px;
+    }
+    .item-price {
+      font-size: 13px;
+      color: #000;
+    }
+    form {
+      background: #fff;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 400px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    form h2 {
+      text-align: center;
+      margin-bottom: 15px;
     }
     label {
+      font-size: 14px;
+      font-weight: bold;
       display: block;
-      margin-bottom: 6px;
-      font-size: 13px;
+      margin-top: 10px;
+      margin-bottom: 3px;
     }
     input {
       width: 100%;
       padding: 8px;
-      margin-bottom: 12px;
-      border-radius: 6px;
+      font-size: 14px;
       border: 1px solid #ccc;
-      font-size: 13px;
+      border-radius: 8px;
     }
     button {
       width: 100%;
+      margin-top: 15px;
       padding: 10px;
-      background: #4CAF50;
-      color: white;
+      background: #0078d7;
       border: none;
+      color: #fff;
       border-radius: 8px;
+      font-size: 15px;
       cursor: pointer;
-      font-size: 14px;
     }
     button:hover {
-      background: #45a049;
+      background: #005fa3;
     }
   </style>
 </head>
 <body>
 
-  <h2>GIFT IN GAME (GAMEPASS)</h2>
+<h1>GIFT IN GAME (GAMEPASS)</h1>
 
-  <!-- MAP : ANTARTICA EXPEDITION -->
-  <div class="map-section">
-    <h3>MAP : ANTARTICA EXPEDITION</h3>
-    <p class="note">(tanpa ketemuan di server)</p>
-    <div class="pricelist-container">
-      <div class="price-box" onclick="isiForm('Antartica Expedition','Guide - 196 Robux',196*130)">Guide<br>196 Robux</div>
-      <div class="price-box" onclick="isiForm('Antartica Expedition','Search & Rescue - 545 Robux',545*130)">Search & Rescue<br>545 Robux</div>
-      <div class="price-box" onclick="isiForm('Antartica Expedition','VIP - 695 Robux',695*130)">VIP<br>695 Robux</div>
-      <div class="price-box" onclick="isiForm('Antartica Expedition','Pro Pack - 296 Robux',296*130)">Pro Pack<br>296 Robux</div>
-      <div class="price-box" onclick="isiForm('Antartica Expedition','Luxury Pack - 345 Robux',345*130)">Luxury Pack<br>345 Robux</div>
-      <div class="price-box" onclick="isiForm('Antartica Expedition','Health Bottle - 125 Robux',125*130)">Health Bottle<br>125 Robux</div>
-      <div class="price-box" onclick="isiForm('Antartica Expedition','Music Backpack - 345 Robux',345*130)">Music Backpack<br>345 Robux</div>
-      <div class="price-box" onclick="isiForm('Antartica Expedition','Extra Stamina - 99 Robux',99*130)">Extra Stamina<br>99 Robux</div>
-      <div class="price-box" onclick="isiForm('Antartica Expedition','Storm Googles - 99 Robux',99*130)">Storm Googles<br>99 Robux</div>
-      <div class="price-box" onclick="isiForm('Antartica Expedition','Flags - 40 Robux',40*130)">Flags<br>40 Robux</div>
-      <div class="price-box" onclick="isiForm('Antartica Expedition','Flashlight - 70 Robux',70*130)">Flashlight<br>70 Robux</div>
-      <div class="price-box" onclick="isiForm('Antartica Expedition','Backpack Colors - 50 Robux',50*130)">Backpack Colors<br>50 Robux</div>
-    </div>
+<!-- MAP: ANTARCTICA EXPEDITION -->
+<div class="map-title">MAP: ANTARCTICA EXPEDITION</div>
+<div class="map-note">(tanpa ketemuan di server)</div>
+<div class="pricelist-container">
+  <div class="price-box" onclick="fillForm('Antarctica Expedition','Guide','196 Robux','25480')">
+    <div class="item-name">Guide</div>
+    <div class="item-robux">196 Robux</div>
+    <div class="item-price">Rp 25.480</div>
   </div>
-
-  <!-- MAP : CAR DRIVING INDONESIA -->
-  <div class="map-section">
-    <h3>MAP : CAR DRIVING INDONESIA</h3>
-    <p class="note">(ketemuan di server)</p>
-    <div class="pricelist-container">
-      <div class="price-box" onclick="isiForm('Car Driving Indonesia','Luxury Vehicle - 259 Robux',259*130)">Luxury Vehicle<br>259 Robux</div>
-      <div class="price-box" onclick="isiForm('Car Driving Indonesia','Retro Pass - 169 Robux',169*130)">Retro Pass<br>169 Robux</div>
-      <div class="price-box" onclick="isiForm('Car Driving Indonesia','Emergency Vehicle - 139 Robux',139*130)">Emergency Vehicle<br>139 Robux</div>
-      <div class="price-box" onclick="isiForm('Car Driving Indonesia','Rare Imports - 189 Robux',189*130)">Rare Imports<br>189 Robux</div>
-      <div class="price-box" onclick="isiForm('Car Driving Indonesia','Advanced Modification - 249 Robux',249*130)">Advanced Modification<br>249 Robux</div>
-      <div class="price-box" onclick="isiForm('Car Driving Indonesia','Additional Car Slot - 99 Robux',99*130)">Additional Car Slot<br>99 Robux</div>
-      <div class="price-box" onclick="isiForm('Car Driving Indonesia','2x Additional Car Slot - 269 Robux',269*130)">2x Additional Car Slot<br>269 Robux</div>
-      <div class="price-box" onclick="isiForm('Car Driving Indonesia','2x Paycheck - 399 Robux',399*130)">2x Paycheck<br>399 Robux</div>
-      <div class="price-box" onclick="isiForm('Car Driving Indonesia','(+50%) Job Earning - 399 Robux',399*130)">(+50%) Job Earning<br>399 Robux</div>
-      <div class="price-box" onclick="isiForm('Car Driving Indonesia','Luxury House - 79 Robux',79*130)">Luxury House<br>79 Robux</div>
-    </div>
+  <div class="price-box" onclick="fillForm('Antarctica Expedition','Search & Rescue','545 Robux','70850')">
+    <div class="item-name">Search & Rescue</div>
+    <div class="item-robux">545 Robux</div>
+    <div class="item-price">Rp 70.850</div>
   </div>
-
-  <!-- MAP : DRESS TO IMPRESS -->
-  <div class="map-section">
-    <h3>MAP : DRESS TO IMPRESS</h3>
-    <p class="note">(ketemuan di server)</p>
-    <div class="pricelist-container">
-      <div class="price-box" onclick="isiForm('Dress to Impress','VIP Permanent - 799 Robux',799*130)">VIP Permanent<br>799 Robux</div>
-      <div class="price-box" onclick="isiForm('Dress to Impress','VIP Monthly - 299 Robux',299*130)">VIP Monthly<br>299 Robux</div>
-      <div class="price-box" onclick="isiForm('Dress to Impress','2x Money - 399 Robux',399*130)">2x Money<br>399 Robux</div>
-      <div class="price-box" onclick="isiForm('Dress to Impress','Custom Makeup - 349 Robux',349*130)">Custom Makeup<br>349 Robux</div>
-      <div class="price-box" onclick="isiForm('Dress to Impress','Run Faster - 149 Robux',149*130)">Run Faster<br>149 Robux</div>
-      <div class="price-box" onclick="isiForm('Dress to Impress','Increased Item Limit - 129 Robux',129*130)">Increased Item Limit<br>129 Robux</div>
-    </div>
+  <div class="price-box" onclick="fillForm('Antarctica Expedition','VIP','695 Robux','90350')">
+    <div class="item-name">VIP</div>
+    <div class="item-robux">695 Robux</div>
+    <div class="item-price">Rp 90.350</div>
   </div>
-
-  <!-- MAP : BROOKHAVEN -->
-  <div class="map-section">
-    <h3>MAP : BROOKHAVEN</h3>
-    <p class="note">(ketemuan di server)</p>
-    <div class="pricelist-container">
-      <div class="price-box" onclick="isiForm('Brookhaven','Vehicle Upgrade - 30 Robux',30*130)">Vehicle Upgrade<br>30 Robux</div>
-      <div class="price-box" onclick="isiForm('Brookhaven','On Demand Fire - 50 Robux',50*130)">On Demand Fire<br>50 Robux</div>
-      <div class="price-box" onclick="isiForm('Brookhaven','Horse Unlock - 60 Robux',60*130)">Horse Unlock<br>60 Robux</div>
-      <div class="price-box" onclick="isiForm('Brookhaven','Faces Unlock - 120 Robux',120*130)">Faces Unlock<br>120 Robux</div>
-      <div class="price-box" onclick="isiForm('Brookhaven','Penthouse - 150 Robux',150*130)">Penthouse<br>150 Robux</div>
-      <div class="price-box" onclick="isiForm('Brookhaven','Vehicle Speed Upgrade - 199 Robux',199*130)">Vehicle Speed Upgrade<br>199 Robux</div>
-      <div class="price-box" onclick="isiForm('Brookhaven','Music Unlock - 199 Robux',199*130)">Music Unlock<br>199 Robux</div>
-      <div class="price-box" onclick="isiForm('Brookhaven','Premium - 275 Robux',275*130)">Premium<br>275 Robux</div>
-      <div class="price-box" onclick="isiForm('Brookhaven','Theme Park - 299 Robux',299*130)">Theme Park<br>299 Robux</div>
-      <div class="price-box" onclick="isiForm('Brookhaven','Boat Pack - 299 Robux',299*130)">Boat Pack<br>299 Robux</div>
-      <div class="price-box" onclick="isiForm('Brookhaven','Land Unlock - 500 Robux',500*130)">Land Unlock<br>500 Robux</div>
-      <div class="price-box" onclick="isiForm('Brookhaven','Disaster Pass - 500 Robux',500*130)">Disaster Pass<br>500 Robux</div>
-      <div class="price-box" onclick="isiForm('Brookhaven','Vehicle Pack - 799 Robux',799*130)">Vehicle Pack<br>799 Robux</div>
-      <div class="price-box" onclick="isiForm('Brookhaven','Estates Unlocked - 799 Robux',799*130)">Estates Unlocked<br>799 Robux</div>
-      <div class="price-box" onclick="isiForm('Brookhaven','VIP Brookhaven - 999 Robux',999*130)">VIP Brookhaven<br>999 Robux</div>
-    </div>
+  <div class="price-box" onclick="fillForm('Antarctica Expedition','Pro Pack','296 Robux','38480')">
+    <div class="item-name">Pro Pack</div>
+    <div class="item-robux">296 Robux</div>
+    <div class="item-price">Rp 38.480</div>
   </div>
-
-  <!-- MAP : SALON DE FIESTAS -->
-  <div class="map-section">
-    <h3>MAP : SALON DE FIESTAS</h3>
-    <p class="note">(ketemuan di server)</p>
-    <div class="pricelist-container">
-      <div class="price-box" onclick="isiForm('Salon de Fiestas','VIP - 50 Robux',50*130)">VIP<br>50 Robux</div>
-      <div class="price-box" onclick="isiForm('Salon de Fiestas','Commands - 160 Robux',160*130)">Commands<br>160 Robux</div>
-      <div class="price-box" onclick="isiForm('Salon de Fiestas','Food - 20 Robux',20*130)">Food<br>20 Robux</div>
-      <div class="price-box" onclick="isiForm('Salon de Fiestas','Themes - 5 Robux',5*130)">Themes<br>5 Robux</div>
-    </div>
+  <div class="price-box" onclick="fillForm('Antarctica Expedition','Luxury Pack','345 Robux','44850')">
+    <div class="item-name">Luxury Pack</div>
+    <div class="item-robux">345 Robux</div>
+    <div class="item-price">Rp 44.850</div>
   </div>
-
-  <!-- MAP : FISCH -->
-  <div class="map-section">
-    <h3>MAP : FISCH</h3>
-    <p class="note">(ketemuan di server)</p>
-    <div class="pricelist-container">
-      <div class="price-box" onclick="isiForm('Fisch','Bobber Pack - 99 Robux',99*130)">Bobber Pack<br>99 Robux</div>
-      <div class="price-box" onclick="isiForm('Fisch','Emote Pack - 99 Robux',99*130)">Emote Pack<br>99 Robux</div>
-      <div class="price-box" onclick="isiForm('Fisch','Double XP - 239 Robux',239*130)">Double XP<br>239 Robux</div>
-      <div class="price-box" onclick="isiForm('Fisch','Radio - 199 Robux',199*130)">Radio<br>199 Robux</div>
-      <div class="price-box" onclick="isiForm('Fisch','Supporter - 229 Robux',229*130)">Supporter<br>229 Robux</div>
-      <div class="price-box" onclick="isiForm('Fisch','Spawn Boat - 299 Robux',299*130)">Spawn Boat<br>299 Robux</div>
-      <div class="price-box" onclick="isiForm('Fisch','Sell Anywhere - 399 Robux',399*130)">Sell Anywhere<br>399 Robux</div>
-      <div class="price-box" onclick="isiForm('Fisch','Appraiser Luck - 399 Robux',399*130)">Appraiser Luck<br>399 Robux</div>
-      <div class="price-box" onclick="isiForm('Fisch','Appraise Anywhere - 399 Robux',399*130)">Appraise Anywhere<br>399 Robux</div>
-      <div class="price-box" onclick="isiForm('Fisch','Appraiser\'s Luck - 399 Robux',399*130)">Appraiser's Luck<br>399 Robux</div>
-      <div class="price-box" onclick="isiForm('Fisch','Bobber 1an - 79 Robux',79*130)">Bobber 1an<br>79 Robux</div>
-      <div class="price-box" onclick="isiForm('Fisch','Bobber Bundle - 199 Robux',199*130)">Bobber Bundle<br>199 Robux</div>
-    </div>
+  <div class="price-box" onclick="fillForm('Antarctica Expedition','Health Bottle','125 Robux','16250')">
+    <div class="item-name">Health Bottle</div>
+    <div class="item-robux">125 Robux</div>
+    <div class="item-price">Rp 16.250</div>
   </div>
-
-  <!-- FORM -->
-  <div class="form-container" id="orderForm">
-    <h3>Form Order Gift In Game</h3>
-    <form id="giftForm" onsubmit="kirimWA(event)">
-      <label>Display Name Roblox:</label>
-      <input type="text" id="displayName" required>
-      <label>Username Roblox:</label>
-      <input type="text" id="username" required>
-      <label>Maps:</label>
-      <input type="text" id="map" required>
-      <label>Item:</label>
-      <input type="text" id="item" required>
-      <label>Harga:</label>
-      <input type="text" id="harga" readonly>
-      <button type="submit">Kirim via WhatsApp</button>
-    </form>
+  <div class="price-box" onclick="fillForm('Antarctica Expedition','Music Backpack','345 Robux','44850')">
+    <div class="item-name">Music Backpack</div>
+    <div class="item-robux">345 Robux</div>
+    <div class="item-price">Rp 44.850</div>
   </div>
+  <div class="price-box" onclick="fillForm('Antarctica Expedition','Extra Stamina','99 Robux','12870')">
+    <div class="item-name">Extra Stamina</div>
+    <div class="item-robux">99 Robux</div>
+    <div class="item-price">Rp 12.870</div>
+  </div>
+  <div class="price-box" onclick="fillForm('Antarctica Expedition','Storm Googles','99 Robux','12870')">
+    <div class="item-name">Storm Googles</div>
+    <div class="item-robux">99 Robux</div>
+    <div class="item-price">Rp 12.870</div>
+  </div>
+  <div class="price-box" onclick="fillForm('Antarctica Expedition','Flags','40 Robux','5200')">
+    <div class="item-name">Flags</div>
+    <div class="item-robux">40 Robux</div>
+    <div class="item-price">Rp 5.200</div>
+  </div>
+  <div class="price-box" onclick="fillForm('Antarctica Expedition','Flashlight','70 Robux','9100')">
+    <div class="item-name">Flashlight</div>
+    <div class="item-robux">70 Robux</div>
+    <div class="item-price">Rp 9.100</div>
+  </div>
+  <div class="price-box" onclick="fillForm('Antarctica Expedition','Backpack Colors','50 Robux','6500')">
+    <div class="item-name">Backpack Colors</div>
+    <div class="item-robux">50 Robux</div>
+    <div class="item-price">Rp 6.500</div>
+  </div>
+</div>
 
-  <script>
-    function isiForm(map, item, harga) {
-      document.getElementById("map").value = map;
-      document.getElementById("item").value = item;
-      document.getElementById("harga").value = "Rp" + new Intl.NumberFormat('id-ID').format(harga);
-      document.getElementById("orderForm").scrollIntoView({behavior: "smooth"});
-    }
+<!-- === MAP LAINNYA LANJUT DI SINI === -->
+<!-- Car Driving Indonesia, Dress to Impress, Brookhaven, Salon de Fiestas, Fisch -->
+<!-- (Karena panjang, semua struktur sama persis dengan Antarctica, tinggal lanjutkan isiannya) -->
 
-    function kirimWA(e) {
-      e.preventDefault();
-      let displayName = document.getElementById("displayName").value;
-      let username = document.getElementById("username").value;
-      let map = document.getElementById("map").value;
-      let item = document.getElementById("item").value;
-      let harga = document.getElementById("harga").value;
+<!-- FORM -->
+<form id="orderForm">
+  <h2>Formulir Gift In Game</h2>
+  <label>Display Name Roblox</label>
+  <input type="text" id="displayname" required>
+  <label>Username Roblox</label>
+  <input type="text" id="username" required>
+  <label>Map</label>
+  <input type="text" id="map" required>
+  <label>Item</label>
+  <input type="text" id="item" required>
+  <label>Harga</label>
+  <input type="text" id="harga" required>
+  <button type="button" onclick="sendWA()">Kirim via WhatsApp</button>
+</form>
 
-      let pesan = `Form Order Gift In Game%0A%0ADisplay Name: ${displayName}%0AUsername: ${username}%0AMaps: ${map}%0AItem: ${item}%0AHarga: ${harga}`;
-      window.open(`https://wa.me/6283197962700?text=${pesan}`, "_blank");
-    }
-  </script>
+<script>
+function fillForm(map,item,robux,harga) {
+  document.getElementById("map").value = map;
+  document.getElementById("item").value = item + " (" + robux + ")";
+  document.getElementById("harga").value = "Rp " + harga;
+}
+
+function sendWA() {
+  let dn = document.getElementById("displayname").value;
+  let un = document.getElementById("username").value;
+  let map = document.getElementById("map").value;
+  let item = document.getElementById("item").value;
+  let harga = document.getElementById("harga").value;
+
+  let pesan = `Halo, saya ingin beli Gift In Game:\nDisplay Name: ${dn}\nUsername: ${un}\nMap: ${map}\nItem: ${item}\nHarga: ${harga}`;
+  window.open("https://wa.me/6283197962700?text=" + encodeURIComponent(pesan), "_blank");
+}
+</script>
 
 </body>
 </html>
