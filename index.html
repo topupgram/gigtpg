@@ -5,118 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gift in Game (Gamepass)</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #C9DBF0;
-      margin: 0;
-      padding: 0;
-      font-size: 14px;
-    }
-    h2 {
-      text-align: center;
-      padding: 15px;
-    }
+    body { font-family: Arial, sans-serif; background: #C9DBF0; margin: 0; padding: 0; font-size: 14px; }
+    h2 { text-align: center; padding: 15px; }
+    h3 { text-align: center; margin-top: 20px; }
+    small { display: block; text-align: center; margin-bottom: 10px; color: #444; font-size: 12px; }
     .pricelist-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin: 10px auto;
-      max-width: 420px;
+      display: flex; flex-wrap: wrap; gap: 10px;
+      justify-content: center; margin: 10px auto; max-width: 460px;
     }
     .price-box {
-      flex: 0 1 calc(50% - 12px);
-      background: white;
-      border-radius: 12px;
-      padding: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      text-align: center;
-      cursor: pointer;
+      flex: 0 1 calc(50% - 10px);
+      background: white; border-radius: 10px;
+      padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center; cursor: pointer;
     }
-    .price-box h4 {
-      margin: 5px 0;
-      font-size: 14px;
-    }
-    .price-box p {
-      margin: 0;
-      font-size: 12px;
-      color: #555;
-    }
+    .price-box h4 { margin: 5px 0; font-size: 14px; }
+    .price-box p { margin: 0; font-size: 12px; color: #555; }
     .form-container {
-      background: white;
-      border-radius: 12px;
+      background: white; border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      max-width: 420px;
-      margin: 20px auto;
-      padding: 15px;
+      max-width: 420px; margin: 20px auto; padding: 15px;
     }
-    .form-container h3 {
-      text-align: center;
-      margin-bottom: 15px;
-    }
-    .form-container label {
-      display: block;
-      margin: 6px 0 2px;
-      font-size: 13px;
-    }
+    .form-container h3 { text-align: center; margin-bottom: 15px; }
+    .form-container label { display: block; margin: 6px 0 2px; font-size: 13px; }
     .form-container input {
-      width: 100%;
-      padding: 8px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      margin-bottom: 8px;
-      font-size: 13px;
+      width: 100%; padding: 8px; border: 1px solid #ddd;
+      border-radius: 8px; margin-bottom: 8px; font-size: 13px;
     }
     .form-container button {
-      width: 100%;
-      padding: 10px;
-      background: #0078ff;
-      border: none;
-      color: white;
-      font-size: 14px;
-      border-radius: 8px;
-      cursor: pointer;
+      width: 100%; padding: 10px; background: #0078ff;
+      border: none; color: white; font-size: 14px;
+      border-radius: 8px; cursor: pointer;
     }
   </style>
 </head>
 <body>
   <h2>GIFT IN GAME (GAMEPASS)</h2>
 
-  <!-- Pricelist -->
+  <!-- MAP: ANTARTICA EXPEDITION -->
+  <h3>ANTARTICA EXPEDITION</h3>
+  <small>tanpa ketemuan di server</small>
   <div class="pricelist-container">
-    <!-- Contoh item -->
-    <div class="price-box" onclick="isiForm('Dress to Impress', 'Premium Dress', 200)">
-      <h4>Premium Dress</h4>
-      <p>200 Robux</p>
-      <p>Rp26.000</p>
-    </div>
-    <div class="price-box" onclick="isiForm('Dress to Impress', 'Luxury Bag', 500)">
-      <h4>Luxury Bag</h4>
-      <p>500 Robux</p>
-      <p>Rp65.000</p>
-    </div>
-    <!-- Tambah item lain sesuai daftar di webmu -->
+    <div class="price-box" onclick="isiForm('Antartica Expedition','Guide',196)"><h4>Guide</h4><p>196 Robux</p><p>Rp25.480</p></div>
+    <div class="price-box" onclick="isiForm('Antartica Expedition','Search & Rescue',545)"><h4>Search & Rescue</h4><p>545 Robux</p><p>Rp70.850</p></div>
+    <div class="price-box" onclick="isiForm('Antartica Expedition','VIP',695)"><h4>VIP</h4><p>695 Robux</p><p>Rp90.350</p></div>
+    <div class="price-box" onclick="isiForm('Antartica Expedition','Pro Pack',296)"><h4>Pro Pack</h4><p>296 Robux</p><p>Rp38.480</p></div>
+    <div class="price-box" onclick="isiForm('Antartica Expedition','Luxury Pack',345)"><h4>Luxury Pack</h4><p>345 Robux</p><p>Rp44.850</p></div>
+    <div class="price-box" onclick="isiForm('Antartica Expedition','Health Bottle',125)"><h4>Health Bottle</h4><p>125 Robux</p><p>Rp16.250</p></div>
+    <div class="price-box" onclick="isiForm('Antartica Expedition','Music Backpack',345)"><h4>Music Backpack</h4><p>345 Robux</p><p>Rp44.850</p></div>
+    <div class="price-box" onclick="isiForm('Antartica Expedition','Extra Stamina',99)"><h4>Extra Stamina</h4><p>99 Robux</p><p>Rp12.870</p></div>
+    <div class="price-box" onclick="isiForm('Antartica Expedition','Storm Googles',99)"><h4>Storm Googles</h4><p>99 Robux</p><p>Rp12.870</p></div>
+    <div class="price-box" onclick="isiForm('Antartica Expedition','Flags',40)"><h4>Flags</h4><p>40 Robux</p><p>Rp5.200</p></div>
+    <div class="price-box" onclick="isiForm('Antartica Expedition','Flashlight',70)"><h4>Flashlight</h4><p>70 Robux</p><p>Rp9.100</p></div>
+    <div class="price-box" onclick="isiForm('Antartica Expedition','Backpack Colors',50)"><h4>Backpack Colors</h4><p>50 Robux</p><p>Rp6.500</p></div>
   </div>
 
-  <!-- Form -->
+  <!-- MAP: CAR DRIVING INDONESIA -->
+  <h3>CAR DRIVING INDONESIA</h3>
+  <small>ketemuan di server</small>
+  <div class="pricelist-container">
+    <div class="price-box" onclick="isiForm('Car Driving Indonesia','Luxury Vehicle',259)"><h4>Luxury Vehicle</h4><p>259 Robux</p><p>Rp33.670</p></div>
+    <div class="price-box" onclick="isiForm('Car Driving Indonesia','Retro Pass',169)"><h4>Retro Pass</h4><p>169 Robux</p><p>Rp21.970</p></div>
+    <div class="price-box" onclick="isiForm('Car Driving Indonesia','Emergency Vehicle',139)"><h4>Emergency Vehicle</h4><p>139 Robux</p><p>Rp18.070</p></div>
+    <div class="price-box" onclick="isiForm('Car Driving Indonesia','Rare Imports',189)"><h4>Rare Imports</h4><p>189 Robux</p><p>Rp24.570</p></div>
+    <div class="price-box" onclick="isiForm('Car Driving Indonesia','Advanced Modification',249)"><h4>Advanced Modification</h4><p>249 Robux</p><p>Rp32.370</p></div>
+    <div class="price-box" onclick="isiForm('Car Driving Indonesia','Additional Car Slot',99)"><h4>Additional Car Slot</h4><p>99 Robux</p><p>Rp12.870</p></div>
+    <div class="price-box" onclick="isiForm('Car Driving Indonesia','2x Additional Car Slot',269)"><h4>2x Additional Car Slot</h4><p>269 Robux</p><p>Rp34.970</p></div>
+    <div class="price-box" onclick="isiForm('Car Driving Indonesia','2x Paycheck',399)"><h4>2x Paycheck</h4><p>399 Robux</p><p>Rp51.870</p></div>
+    <div class="price-box" onclick="isiForm('Car Driving Indonesia','(+50%) Job Earning',399)"><h4>(+50%) Job Earning</h4><p>399 Robux</p><p>Rp51.870</p></div>
+    <div class="price-box" onclick="isiForm('Car Driving Indonesia','Luxury House',79)"><h4>Luxury House</h4><p>79 Robux</p><p>Rp10.270</p></div>
+  </div>
+
+  <!-- MAP lain tinggal tambahin (Dress to Impress, Brookhaven, Salon de Fiestas, Fisch) dengan format sama -->
+
+  <!-- FORM -->
   <div class="form-container" id="orderForm">
     <h3>Form Order Gift in Game</h3>
     <form id="giftForm">
       <label>Display Name Roblox</label>
       <input type="text" id="displayName" required>
-
       <label>Username Roblox</label>
       <input type="text" id="username" required>
-
       <label>Maps</label>
       <input type="text" id="maps" readonly>
-
       <label>Item</label>
       <input type="text" id="item" readonly>
-
       <label>Harga</label>
       <input type="text" id="harga" readonly>
-
       <button type="button" onclick="kirimWA()">Kirim ke WhatsApp</button>
     </form>
   </div>
@@ -127,25 +102,20 @@
       document.getElementById("maps").value = maps;
       document.getElementById("item").value = item + " (" + robux + " Robux)";
       document.getElementById("harga").value = "Rp" + harga.toLocaleString("id-ID");
-
-      // auto scroll
       document.getElementById("orderForm").scrollIntoView({behavior: "smooth"});
     }
-
     function kirimWA() {
       let displayName = document.getElementById("displayName").value;
       let username = document.getElementById("username").value;
       let maps = document.getElementById("maps").value;
       let item = document.getElementById("item").value;
       let harga = document.getElementById("harga").value;
-
       let pesan = `Halo, saya ingin order Gift in Game:\n\n` +
                   `Display Name: ${displayName}\n` +
                   `Username: ${username}\n` +
                   `Maps: ${maps}\n` +
                   `Item: ${item}\n` +
                   `Harga: ${harga}`;
-
       let url = "https://wa.me/6283197962700?text=" + encodeURIComponent(pesan);
       window.open(url, "_blank");
     }
